@@ -7,6 +7,7 @@ A simple F5 menu
 **Requirements**
 - ESX Core(esx_billing, es_extended)
   - [esx_core](https://github.com/esx-framework/esx_core)
+- NativeUI Reloaded!
   
 # Installation
 - Download the latest **Release**
