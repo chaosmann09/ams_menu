@@ -15,13 +15,6 @@ ESX.RegisterServerCallback('ams_menu:getMoney', function(source, cb)
 end)
 
 ESX.RegisterServerCallback('ams_menu:getBank', function(source, cb)
-    local players = GetPlayers()
-    local data = {}
-    for k, playerid in pairs(players) do 
-        local xPlayer = ESX.GetPlayerFromId(playerid)
-        data[#data+1] = {
-            name     = xPlayer.get('bank'), 
-        }
-    end
-    cb(data)
+    local xPlayer = ESX.GetPlayerFromId(source)
+    cb(xPlayer.getAccount('bank').money)
 end)
