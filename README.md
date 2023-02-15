@@ -11,7 +11,7 @@ A simple F5 menu
 # Installation
 - Download the latest **Release**
 - Put the Script on your Server
-- Add `ensure kxin_aduty` to your server.cfg
+- Add `ensure ams_menu` to your server.cfg
 - Refresh or Restart your server and have fun
 
 # Config
