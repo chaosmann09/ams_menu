@@ -66,7 +66,7 @@ function OpenDocsMenu()
     mainmenu:AddItem(perso)
     local showperso = NativeUI.CreateItem(Translation[Config.Locale]['showperso'], '')
     showperso.Activated = function(sender, index)
-        local player, distance = GetClosestPlayer()
+        local player, distance = ESX.Game.GetClosestPlayer()
 
         if distance ~= -1 and distance <= 3.0 then
             TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(player))
@@ -86,7 +86,7 @@ function OpenDocsMenu()
     mainmenu:AddItem(drive)
     local showdrive = NativeUI.CreateItem(Translation[Config.Locale]['showdrive'], '')
     showdrive.Activated = function(sender, index)
-        local player, distance = GetClosestPlayer()
+        local player, distance = ESX.Game.GetClosestPlayer()
 
         if distance ~= -1 and distance <= 3.0 then
             TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(player), 'driver')
@@ -106,7 +106,7 @@ function OpenDocsMenu()
     mainmenu:AddItem(weapon)
     local showweapon = NativeUI.CreateItem(Translation[Config.Locale]['showweapon'], '')
     showweapon.Activated = function(sender, index)
-        local player, distance = GetClosestPlayer()
+        local player, distance = ESX.Game.GetClosestPlayer()
 
         if distance ~= -1 and distance <= 3.0 then
             TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(player), 'weapon')
